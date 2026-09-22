@@ -1,0 +1,42 @@
+baseURL = "/"
+themesDir = "themes"
+theme = "hugo-serif-theme"
+languageCode = "en-us"
+title = "Seda Digital Studio"
+
+[params]
+  favicon = "favicon-32x32.svg"
+  [params.homepage]
+    sticky_header = true
+  [params.fonts]
+    google_fonts = 'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap'
+    heading = "Manrope"
+    base = "Manrope"
+  [params.colors]
+    primary = "#8B5CF6"
+    black = "#0F0E1A"
+    white = "#EDEBFA"
+    white_offset = "#1A1830"
+    grey = "#9C97B8"
+  [params.seo]
+    meta_og_image = ""
+  [params.footer]
+    copyright_text = "© 2026 Seda Digital Studio"
+
+[menu]
+  [[menu.main]]
+    name = "Services"
+    url = "#services"
+    weight = 1
+  [[menu.main]]
+    name = "Work"
+    url = "#work"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "#contact"
+    weight = 4
