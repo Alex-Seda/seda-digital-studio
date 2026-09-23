@@ -680,6 +680,20 @@ h1 span, h2 span {
   text-transform: uppercase;
   letter-spacing: .06em; }
 
+.not-found-section {
+  min-height: calc(100vh - 190px);
+  display: grid;
+  place-items: center;
+  padding-top: 190px; }
+
+.not-found-section h1 {
+  margin-bottom: 28px; }
+
+.not-found-section p:not(.eyebrow) {
+  max-width: 390px;
+  margin: 0 auto 35px;
+  color: #eee9ff; }
+
 .footer {
   background: #0F0E1A;
   padding: 50px 0; }

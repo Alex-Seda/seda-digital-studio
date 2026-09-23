@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found - {{ .Site.Title }}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon-32x32.svg" | relURL }}">
+
+  {{ partial "google-fonts.html" . }}
+  {{ $cssOptions := dict "targetPath" "css/style.css" "enableSourceMap" (not hugo.IsProduction) }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS $cssOptions }}
+  {{ if hugo.IsProduction }}{{ $style = $style | minify | fingerprint }}{{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body class="page page-not-found">
+  {{ partial "main-menu-mobile.html" . }}
+  <div class="wrapper">
+    {{ partial "header.html" . }}
+    <main>
+      <section class="contact-section not-found-section">
+        <div class="container">
+          <p class="eyebrow">404 / Page not found</p>
+          <h1>That page<br><span>doesn't exist.</span></h1>
+          <p>We couldn't find the page you're looking for. Let's get you back to the main site.</p>
+          <a class="button button-primary" href="{{ .Site.Home.RelPermalink }}">Back home <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  {{ partial "footer.html" . }}
+  {{ partial "sub-footer.html" . }}
+</body>
+</html>
