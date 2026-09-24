@@ -1,0 +1,314 @@
+// Home page hero: headline, intro copy, and the abstract visual on the right.
+// (Headline size lives in base/_base.scss; buttons in components/_buttons.scss.)
+
+// Hero shell
+.hero-section {
+  min-height: 800px;
+  padding: 190px 0 115px;
+  overflow: hidden;
+  border-bottom: 1px solid $line;
+}
+
+// Two columns: copy on the left, visual on the right
+.hero-grid {
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  align-items: center;
+  gap: 50px;
+}
+
+// Intro paragraph under the headline
+.hero-lede {
+  max-width: 405px;
+  color: $muted;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+// Button + text link row
+.hero-actions {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+// "Oklahoma City · Remote —— Available for select partnerships"
+.hero-meta {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-top: 85px;
+  font: 10px $mono;
+  color: $muted;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.meta-line {
+  height: 1px;
+  width: 30px;
+  background: $line;
+}
+
+// ---- Right side: the visual -------------------------------------------
+.hero-visual {
+  min-height: 470px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Soft glow blobs behind the panel
+.orb {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.orb-one {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle at 30% 30%, rgba($accent, .25), transparent 65%);
+  right: -40px;
+  top: -40px;
+}
+
+.orb-two {
+  width: 250px;
+  height: 250px;
+  background: rgba($sky, .14);
+  filter: blur(45px);
+  left: 10px;
+  bottom: 5px;
+}
+
+// The tilted dark panel holding the geometric art
+.abstract-visual {
+  width: 100%;
+  max-width: 540px;
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, $visual-bg-start, $visual-bg-mid 62%, $visual-bg-end);
+  border: 1px solid $visual-border;
+  box-shadow: 20px 30px 80px rgba($black, .38);
+  transform: rotate(2deg);
+}
+
+// Faint grid lines inside the panel
+.abstract-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .35;
+  background-image: linear-gradient(rgba($paper, .12) 1px, transparent 1px), linear-gradient(90deg, rgba($paper, .12) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(135deg, transparent 8%, $black 42%, transparent 92%);
+}
+
+// Concentric rings
+.abstract-ring {
+  position: absolute;
+  border: 1px solid rgba($sky, .62);
+  border-radius: 50%;
+}
+
+.ring-large {
+  width: 390px;
+  height: 390px;
+  top: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 28px rgba($accent, .08), 0 0 0 62px rgba($sky, .05);
+}
+
+.ring-small {
+  width: 170px;
+  height: 170px;
+  top: 130px;
+  left: 50%;
+  border-color: rgba($accent, .75);
+  transform: translateX(-50%);
+}
+
+// Two rotated squares
+.abstract-plane {
+  position: absolute;
+  width: 235px;
+  height: 235px;
+  border: 1px solid rgba($paper, .35);
+  transform: rotate(45deg);
+}
+
+.plane-primary {
+  top: 95px;
+  left: 50%;
+  background: rgba($accent, .16);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.plane-secondary {
+  top: 95px;
+  left: 50%;
+  background: rgba($sky, .08);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+// Center "S" badge
+.abstract-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: $accent;
+  color: $ink;
+  font-size: 34px;
+  font-weight: 800;
+  box-shadow: 0 0 0 12px rgba($accent, .16), 0 0 45px rgba($accent, .55);
+  transform: translate(-50%, -50%);
+}
+
+// Corner captions ("SYSTEMS / 01", "MAKE IT MOVE")
+.abstract-label {
+  position: absolute;
+  color: $paper;
+  font: 10px $mono;
+  letter-spacing: .14em;
+}
+
+.label-top {
+  top: 23px;
+  left: 25px;
+}
+
+.label-bottom {
+  right: 25px;
+  bottom: 22px;
+  color: $sky;
+}
+
+// Floating tags over the panel
+.visual-tag {
+  position: absolute;
+  z-index: 2;
+  background: $accent;
+  color: $ink;
+  box-shadow: 12px 12px 35px rgba($black, .2);
+}
+
+// "n8n / connected workflows"
+.tag-top {
+  right: 0;
+  top: 19px;
+  padding: 11px 14px;
+  font-size: 20px;
+  font-weight: 700;
+  transform: rotate(-5deg);
+}
+
+.visual-tag small {
+  display: block;
+  font: 9px $mono;
+  margin-top: 2px;
+}
+
+// "Built around your process / Not another template."
+.tag-bottom {
+  left: 7px;
+  bottom: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 14px 10px 10px;
+  transform: rotate(-3deg);
+}
+
+.tag-bottom b {
+  display: block;
+  font-size: 11px;
+}
+
+.tag-bottom small {
+  color: $legacy-olive-tag;
+}
+
+// ---- Tablet: stack copy above visual ----------------------------------
+@media (max-width: $bp-tablet) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding-top: 150px;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+}
+
+// ---- Mobile: tighter spacing, smaller visual --------------------------
+@media (max-width: $bp-mobile) {
+  .hero-section {
+    min-height: 0;
+    padding: 130px 0 75px;
+  }
+
+  .hero-lede {
+    font-size: 15px;
+  }
+
+  .hero-meta {
+    margin-top: 55px;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    min-height: 330px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .abstract-visual {
+    height: 310px;
+    transform: rotate(1deg) scale(.9);
+  }
+
+  .ring-large {
+    width: 285px;
+    height: 285px;
+    top: 13px;
+  }
+
+  .ring-small {
+    width: 125px;
+    height: 125px;
+    top: 93px;
+  }
+
+  .abstract-plane {
+    width: 175px;
+    height: 175px;
+    top: 68px;
+  }
+
+  .abstract-core {
+    width: 62px;
+    height: 62px;
+    font-size: 27px;
+  }
+
+  .tag-top {
+    right: -3px;
+    top: 0;
+  }
+
+  .tag-bottom {
+    left: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,33 @@
+// Layout shared by the main content sections: vertical spacing and headings.
+// Used by services, case study (.work-section), principles and contact.
+
+// Top/bottom spacing and divider line
+.services-section,
+.work-section,
+.principles-section {
+  padding: 145px 0;
+  border-bottom: 1px solid $line;
+}
+
+// Heading block (eyebrow + h2 + intro) at the top of a section
+.section-heading {
+  max-width: 720px;
+}
+
+// Big h2 style shared by services, principles and contact
+.section-heading h2,
+.principles-section h2,
+.contact-section h2 {
+  font-size: clamp(2.8rem, 5vw, 5.1rem);
+  letter-spacing: -.08em;
+  line-height: .94;
+  margin-bottom: 28px;
+}
+
+@media (max-width: $bp-mobile) {
+  .services-section,
+  .work-section,
+  .principles-section {
+    padding: 90px 0;
+  }
+}

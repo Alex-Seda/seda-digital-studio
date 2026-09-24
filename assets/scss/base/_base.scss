@@ -1,0 +1,60 @@
+// Global defaults: reset, page, links, page container, default headings.
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: $ink;
+  color: $paper;
+  font-family: $display;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Centered page column used by every section
+.container {
+  width: calc(100% - 64px);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+// Headings and paragraphs
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3.4rem, 6.5vw, 6.7rem);
+  letter-spacing: -.09em;
+  line-height: .91;
+  margin-bottom: 34px;
+  font-weight: 700;
+}
+
+// The colored second line inside headlines
+h1 span,
+h2 span {
+  color: $accent;
+}
+
+@media (max-width: $bp-mobile) {
+  .container {
+    width: calc(100% - 38px);
+    max-width: 560px;
+  }
+}

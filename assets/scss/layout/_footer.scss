@@ -1,0 +1,64 @@
+// Footer (links + note) and the thin copyright bar underneath it.
+
+.footer {
+  background: $ink;
+  padding: 50px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+}
+
+.footer-note {
+  color: $muted;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-links {
+  justify-self: end;
+  display: flex;
+  gap: 23px;
+  font: 10px $mono;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+.footer-links a:hover {
+  color: $accent;
+}
+
+// Copyright bar (© / tagline / location)
+.sub-footer {
+  border-top: 1px solid $line;
+  background: $ink;
+  color: $muted;
+  padding: 18px 0;
+}
+
+.sub-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font: 9px $mono;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+@media (max-width: $bp-mobile) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .footer-links {
+    justify-self: start;
+    flex-wrap: wrap;
+  }
+
+  .sub-footer-inner {
+    flex-direction: column;
+    gap: 9px;
+  }
+}

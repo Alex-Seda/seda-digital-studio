@@ -1,0 +1,20 @@
+// The small uppercase label that sits above section headings.
+
+.eyebrow {
+  color: $accent;
+  margin: 0 0 26px;
+  font: 500 10px $mono;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+// Glowing dot next to the hero eyebrow
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: $accent;
+  border-radius: 50%;
+  margin-right: 9px;
+  box-shadow: 0 0 0 4px rgba($accent, .14);
+}

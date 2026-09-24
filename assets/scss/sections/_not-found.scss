@@ -1,0 +1,29 @@
+// 404 page. The page uses <section class="contact-section not-found-section">,
+// so it starts from the contact styles and adjusts them here.
+// MUST be imported after _contact.scss so these rules win ties.
+
+.not-found-section {
+  min-height: calc(100vh - 190px);
+  display: grid;
+  place-items: center;
+  padding-top: 190px;
+}
+
+.not-found-section h1 {
+  margin-bottom: 28px;
+}
+
+.not-found-section p:not(.eyebrow) {
+  max-width: 390px;
+  margin: 0 auto 35px;
+  color: $on-accent-body;
+}
+
+// On mobile the contact section's smaller top padding (95px) has to win over
+// the 190px above. Before the refactor this happened by accident of file
+// order; it is spelled out here so it stays true.
+@media (max-width: $bp-mobile) {
+  .not-found-section {
+    padding-top: 95px;
+  }
+}

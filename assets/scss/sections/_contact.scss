@@ -1,0 +1,58 @@
+// "Let's make it work better" (id="contact"): full-width accent-colored
+// call-to-action. The 404 page reuses this section (see _not-found.scss).
+// (The h2 size is shared, see components/_section.scss.)
+
+.contact-section {
+  background: $accent;
+  color: $paper;
+  text-align: center;
+  padding: 150px 0 110px;
+}
+
+.contact-section .eyebrow {
+  color: $on-accent-eyebrow;
+}
+
+// Underlined second line of the heading
+.contact-section h2 span {
+  color: $paper;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+// Paragraph under the heading
+.contact-section > .container > p:not(.eyebrow) {
+  max-width: 390px;
+  margin: 0 auto 35px;
+  color: $on-accent-body;
+}
+
+// Light button on the accent background
+.contact-section .button {
+  background: $paper;
+  color: $ink;
+}
+
+// "Typically replies within 2 business days · Oklahoma City · Remote"
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+  margin-top: 70px;
+  color: $on-accent-meta;
+  font: 10px $mono;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+@media (max-width: $bp-mobile) {
+  .contact-section {
+    padding: 95px 0 70px;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 9px;
+  }
+}

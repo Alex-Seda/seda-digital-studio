@@ -1,10 +1,25 @@
-@import 'variables';
-@import 'base';
-@import 'header';
-@import 'hero';
-@import 'sections';
-@import 'case-study';
-@import 'principles';
-@import 'contact';
-@import 'footer';
-@import 'responsive';
+// Entry point: imports only, no styles here.
+// ORDER MATTERS: when two rules tie, the one imported later wins.
+// (e.g. sections/not-found must come after sections/contact.)
+
+// 1. Tokens, global defaults, shared components
+@import 'base/tokens';
+@import 'base/base';
+@import 'components/buttons';
+@import 'components/eyebrow';
+@import 'components/section';
+
+// 2. Header
+@import 'layout/header';
+
+// 3. Page sections, top to bottom
+@import 'sections/hero';
+@import 'sections/trust-strip';
+@import 'sections/services';
+@import 'sections/case-study';
+@import 'sections/principles';
+@import 'sections/contact';
+@import 'sections/not-found';
+
+// 4. Footer
+@import 'layout/footer';

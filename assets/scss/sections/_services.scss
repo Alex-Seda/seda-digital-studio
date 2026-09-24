@@ -1,0 +1,106 @@
+// "What we build": intro text and the four service cards.
+// (Section padding and h2 style are shared, see components/_section.scss.)
+
+// Intro paragraph, indented under the heading
+.section-intro {
+  max-width: 390px;
+  color: $muted;
+  line-height: 1.6;
+  margin-left: 37%;
+}
+
+// Four-column card grid with hairline borders
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 80px;
+  border-top: 1px solid $line;
+  border-left: 1px solid $line;
+}
+
+.service-card {
+  min-height: 380px;
+  padding: 25px;
+  border-right: 1px solid $line;
+  border-bottom: 1px solid $line;
+  display: flex;
+  flex-direction: column;
+}
+
+// The first card is filled with the accent color
+.service-card-featured {
+  background: $accent;
+  color: $ink;
+}
+
+// "01 / 04"
+.service-number {
+  font: 10px $mono;
+  color: $muted;
+}
+
+.service-card-featured .service-number {
+  color: $legacy-olive-number;
+}
+
+// Icon area (✦, grid squares, </>, ↗)
+.service-icon {
+  height: 105px;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  color: $accent;
+}
+
+.service-card-featured .service-icon {
+  color: $ink;
+}
+
+// The four-squares icon on card 02
+.icon-grid {
+  grid-template-columns: repeat(2, 13px);
+  grid-template-rows: repeat(2, 13px);
+  gap: 4px;
+}
+
+.icon-grid i {
+  border: 1px solid $accent;
+}
+
+.service-card h3 {
+  font-size: 19px;
+  line-height: 1.08;
+  letter-spacing: -.05em;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  color: $muted;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.service-card-featured p {
+  color: $legacy-olive-text;
+}
+
+@media (max-width: $bp-tablet) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .section-intro {
+    margin-left: 0;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,231 @@
+// "Flagship case study" (id="work"): heading row, the big SLTS card,
+// and the "Secondary examples" cards below it.
+// (Section padding and h2 style are shared, see components/_section.scss.)
+
+// ---- Heading row: title on the left, "Visit the series" link on the right
+.work-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 40px;
+  align-items: end;
+}
+
+.work-heading .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.work-heading h2 {
+  grid-column: 1;
+  margin-bottom: 0;
+}
+
+.work-heading .text-link {
+  grid-column: 2;
+  grid-row: 2;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+// ---- Big card: visual on the left, copy on the right
+.flagship-case {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+  margin-top: 60px;
+  padding: 40px;
+  border: 1px solid rgba($accent, .25);
+  border-radius: 24px;
+  background: $card;
+}
+
+// Left: dark panel with rings, "SLTS" and three pills
+.case-visual {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: $ink;
+}
+
+.case-orbit {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  border: 1px solid $accent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 32px rgba($accent, .08), 0 0 0 64px rgba($accent, .05);
+}
+
+// "SLTS / DJANGO APP"
+.case-label {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: .9;
+  letter-spacing: -.06em;
+  color: $paper;
+
+  span {
+    display: block;
+    margin-top: 10px;
+    font: 11px $mono;
+    letter-spacing: .12em;
+    color: $muted;
+  }
+}
+
+// "Registration / Admin / Reporting"
+.case-pills {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+
+  span {
+    padding: 5px 13px;
+    border: 1px solid $accent;
+    border-radius: 999px;
+    background: $card;
+    color: $paper;
+    font-size: 13px;
+  }
+}
+
+// Right: copy
+.case-kicker {
+  margin: 0 0 14px;
+  font: 12px $mono;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+.case-copy {
+  h3 {
+    margin: 0 0 18px;
+  }
+
+  p {
+    margin: 0 0 16px;
+    color: $muted;
+    line-height: 1.6;
+  }
+}
+
+// Three numbered highlights under the copy
+.case-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+
+  > div {
+    padding-top: 16px;
+    border-top: 1px solid rgba($accent, .35);
+  }
+
+  span {
+    display: block;
+    margin-bottom: 8px;
+    font: 11px $mono;
+    color: $accent;
+  }
+
+  b {
+    display: block;
+    font-size: 15px;
+    color: $paper;
+  }
+
+  small {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $muted;
+  }
+}
+
+// ---- "Secondary examples" cards
+// NOTE: only the icon has styles. .secondary-work and .secondary-grid have
+// no desktop styles (see follow-up notes); left as-is on purpose.
+.secondary-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: $card;
+  color: $accent;
+  font-size: 18px;
+}
+
+// ---- Tablet: stack the big card ---------------------------------------
+@media (max-width: $bp-tablet) {
+  .flagship-case {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .case-copy {
+    padding: 0 10px 15px;
+  }
+}
+
+// ---- Mobile -----------------------------------------------------------
+@media (max-width: $bp-mobile) {
+  .work-heading {
+    display: block;
+  }
+
+  .work-heading .text-link {
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .flagship-case {
+    margin-top: 45px;
+    padding: 12px;
+  }
+
+  .case-visual {
+    min-height: 300px;
+  }
+
+  .case-orbit {
+    width: 245px;
+    height: 245px;
+    top: 30px;
+  }
+
+  .case-label {
+    font-size: 48px;
+  }
+
+  .case-details,
+  .secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .secondary-work {
+    margin-top: 60px;
+  }
+
+  .secondary-grid p {
+    min-height: 0;
+  }
+}

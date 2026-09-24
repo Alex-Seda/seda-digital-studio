@@ -1,0 +1,44 @@
+// Design tokens: every color, font and breakpoint the site uses.
+// Change a value here and it changes everywhere.
+
+// ---- Fonts -----------------------------------------------------------
+// NOTE: the 404 template also includes partials/google-fonts.html. If that
+// partial already loads these two fonts, delete this @import line so they
+// are not fetched twice.
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+$display: 'Manrope', sans-serif;   // headings and body text
+$mono: 'DM Mono', monospace;       // labels, buttons, small caps text
+
+// ---- Brand colors ----------------------------------------------------
+$ink: #0F0E1A;      // page background; dark text on accent surfaces
+$paper: #EDEBFA;    // main light text
+$muted: #9C97B8;    // secondary text
+$line: #302B4C;     // borders and dividers
+$accent: #8B5CF6;   // purple accent (was called $acid)
+$sky: #38BDF8;      // blue secondary accent
+$card: #1A1830;     // card / panel background
+$black: #000;       // shadows and gradient masks
+
+// ---- Text tints used on the purple contact / 404 section --------------
+$on-accent-eyebrow: #d7c8ff;   // small label
+$on-accent-body: #eee9ff;      // paragraph text
+$on-accent-meta: #e0d5ff;      // location / reply-time line
+
+// ---- Hero visual panel ------------------------------------------------
+$visual-bg-start: #17152a;
+$visual-bg-mid: #211d3c;
+$visual-bg-end: #111022;
+$visual-border: #403765;
+
+// ---- Leftovers from the old lime theme --------------------------------
+// Still in use, so kept as-is for now. They look off next to the purple
+// theme (see the follow-up notes). Replace these in a separate pass.
+$legacy-olive-tag: #4c5c26;      // small text in the hero's bottom tag
+$legacy-olive-number: #4e6331;   // "01 / 04" on the featured service card
+$legacy-olive-text: #536528;     // paragraph on the featured service card
+$legacy-paper: #F5F7F2;          // header border + text-link underline (with alpha)
+
+// ---- Breakpoints (max-width) -----------------------------------------
+$bp-tablet: 900px;
+$bp-mobile: 700px;

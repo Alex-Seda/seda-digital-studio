@@ -1,0 +1,48 @@
+// Buttons and text links, reused across the site.
+
+// Arrow icon inside buttons and links (also used by the header button)
+.header-cta span,
+.button span,
+.text-link span,
+.card-link span {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+// Solid button
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 20px;
+  font: 500 11px $mono;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  transition: transform .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: $accent;
+  color: $ink;
+}
+
+// Underlined text link (hero "See our work", case study "Visit the series")
+.text-link {
+  color: $paper;
+  font: 500 11px $mono;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid rgba($legacy-paper, .4);
+  padding-bottom: 5px;
+}
+
+// "Explore ..." link pinned to the bottom of each service card
+.card-link {
+  margin-top: auto;
+  font: 10px $mono;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}

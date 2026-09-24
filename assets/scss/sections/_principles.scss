@@ -1,0 +1,54 @@
+// "The Seda difference" (id="about"): heading on the left, three numbered
+// principles on the right.
+// (Section padding and h2 style are shared, see components/_section.scss.)
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+// Each principle row: number | title + text
+.principles-list > div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 18px;
+  padding: 22px 0;
+  border-top: 1px solid $line;
+}
+
+.principles-list > div:last-child {
+  border-bottom: 1px solid $line;
+}
+
+.principles-list span {
+  color: $accent;
+  font: 11px $mono;
+}
+
+.principles-list h3 {
+  margin: 0 0 7px;
+  font-size: 19px;
+  letter-spacing: -.04em;
+}
+
+.principles-list p {
+  grid-column: 2;
+  margin: 0;
+  color: $muted;
+  font-size: 13px;
+  max-width: 330px;
+}
+
+@media (max-width: $bp-tablet) {
+  .principles-grid {
+    gap: 50px;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
