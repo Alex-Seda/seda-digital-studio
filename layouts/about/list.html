@@ -1,0 +1,83 @@
+{{ define "body_classes" }}page-about{{ end }}
+
+{{ define "main" }}
+<main class="about-page">
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <p class="eyebrow"><span class="status-dot"></span> The people behind the work</p>
+      <h1>Business experience.<br><span>Technical innovation.</span></h1>
+      <p class="about-hero-copy">Seda Digital Studio brings together professional business insight and thoughtful software development to make complex work easier to run.</p>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="container about-story-grid">
+      <div>
+        <p class="eyebrow">Why Seda</p>
+        <h2>A studio built around how work <span>really happens.</span></h2>
+      </div>
+      <div class="about-story-copy">
+        <p>Good software starts with a clear understanding of the business it serves. We take time to learn the decisions, handoffs, and constraints behind a process before we recommend a solution.</p>
+        <p>That combination of practical business thinking and hands-on engineering helps us build digital products that are useful from day one and ready to grow with the organization behind them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-team" id="team">
+    <div class="container">
+      <div class="about-section-heading">
+        <p class="eyebrow">Meet the team</p>
+        <h2>Two perspectives.<br><span>One clear direction.</span></h2>
+      </div>
+
+      <div class="about-team-grid">
+        <article class="team-card">
+          <div class="team-image-wrap">
+            <img src="{{ "images/team/roberto-seda.jpg" | relURL }}" alt="Illustrated portrait of Roberto Seda">
+          </div>
+          <div class="team-card-body">
+            <p class="team-role">Business &amp; legal</p>
+            <h3>Roberto Seda</h3>
+            <p>Roberto is an attorney who brings the business perspective to the studio. He helps clients define priorities, understand risk, and turn big ideas into practical plans.</p>
+            <p>He leads the business side of Seda Digital Studio, making sure every project is grounded in the realities of the organization it is built for.</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-image-wrap">
+            <img src="{{ "images/team/alex-seda.jpg" | relURL }}" alt="Illustrated portrait of Alex Seda">
+          </div>
+          <div class="team-card-body">
+            <p class="team-role">Development &amp; technology</p>
+            <h3>Alex Seda</h3>
+            <p>Alex is the developer behind the studio's digital products. He designs and builds the applications, integrations, and systems that make the work feel simpler.</p>
+            <p>He turns the team's shared understanding of a business into reliable software that people can use with confidence.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values">
+    <div class="container about-values-grid">
+      <div>
+        <p class="eyebrow">Start where you are</p>
+        <h2>You don't need it all <span>figured out.</span></h2>
+      </div>
+      <div class="about-values-list">
+        <div><span>01</span><p><strong>Bring us what is not working.</strong> You do not need a polished brief or a complete product idea before reaching out.</p></div>
+        <div><span>02</span><p><strong>Talk it through.</strong> We will ask questions, understand the people and process involved, and help identify what would make the biggest difference.</p></div>
+        <div><span>03</span><p><strong>Make a plan together.</strong> Once we understand the problem, we will shape a practical solution and a clear next step with you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-contact">
+    <div class="container about-contact-inner">
+      <p class="eyebrow">Have a process worth improving?</p>
+      <h2>Let's make the next step <span>clear.</span></h2>
+      <a class="button button-primary" href="{{ "/#contact" | relURL }}">Start a conversation <span>↗</span></a>
+    </div>
+  </section>
+</main>
+{{ end }}

@@ -1,0 +1,224 @@
+.about-hero {
+  min-height: 670px;
+  display: flex;
+  align-items: flex-end;
+  padding: 170px 0 105px;
+  border-bottom: 1px solid $line;
+  background:
+    radial-gradient(circle at 78% 34%, rgba($accent, .2), transparent 25%),
+    linear-gradient(135deg, $ink 0%, $visual-bg-mid 100%);
+}
+
+.about-hero-inner {
+  max-width: 900px;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.about-hero-copy {
+  max-width: 580px;
+  margin: 0;
+  color: $muted;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-story,
+.about-team,
+.about-values {
+  padding: 145px 0;
+  border-bottom: 1px solid $line;
+}
+
+.about-story-grid,
+.about-values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.about-story h2,
+.about-section-heading h2,
+.about-values h2,
+.about-contact h2 {
+  max-width: 590px;
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 5.1rem);
+  letter-spacing: -.08em;
+  line-height: .94;
+}
+
+.about-story-copy {
+  max-width: 470px;
+  padding-top: 42px;
+}
+
+.about-story-copy p {
+  color: $muted;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.about-story-copy p + p {
+  margin-top: 25px;
+}
+
+.about-section-heading {
+  margin-bottom: 70px;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.team-card {
+  overflow: hidden;
+  background: $card;
+  border: 1px solid $line;
+}
+
+.team-image-wrap {
+  aspect-ratio: 1 / .76;
+  overflow: hidden;
+  background: $visual-bg-start;
+}
+
+.team-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.team-card:hover .team-image-wrap img {
+  transform: scale(1.025);
+}
+
+.team-card-body {
+  padding: 31px 34px 35px;
+}
+
+.team-role {
+  margin-bottom: 12px;
+  color: $accent;
+  font: 500 10px $mono;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.team-card h3 {
+  margin-bottom: 20px;
+  font-size: 31px;
+  letter-spacing: -.06em;
+}
+
+.team-card-body p:not(.team-role) {
+  margin-bottom: 14px;
+  color: $muted;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.team-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-values-list {
+  padding-top: 10px;
+}
+
+.about-values-list > div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-top: 1px solid $line;
+}
+
+.about-values-list > div:last-child {
+  border-bottom: 1px solid $line;
+}
+
+.about-values-list span {
+  color: $accent;
+  font: 11px $mono;
+}
+
+.about-values-list p {
+  max-width: 420px;
+  margin: 0;
+  color: $muted;
+  font-size: 14px;
+}
+
+.about-values-list strong {
+  color: $paper;
+}
+
+.about-contact {
+  padding: 145px 0;
+  background: $accent;
+  color: $ink;
+}
+
+.about-contact .eyebrow {
+  color: $ink;
+}
+
+.about-contact h2 {
+  margin-bottom: 40px;
+}
+
+.about-contact h2 span {
+  color: $paper;
+}
+
+@media (max-width: $bp-tablet) {
+  .about-story-grid,
+  .about-values-grid {
+    gap: 50px;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .about-hero {
+    min-height: 590px;
+    padding: 140px 0 78px;
+  }
+
+  .about-hero-copy {
+    font-size: 16px;
+  }
+
+  .about-story,
+  .about-team,
+  .about-values,
+  .about-contact {
+    padding: 90px 0;
+  }
+
+  .about-story-grid,
+  .about-values-grid,
+  .about-team-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-story-copy {
+    padding-top: 0;
+  }
+
+  .about-section-heading {
+    margin-bottom: 45px;
+  }
+
+  .team-card-body {
+    padding: 27px 24px 30px;
+  }
+}

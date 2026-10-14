@@ -26,21 +26,21 @@ title = "Seda Digital Studio"
 [menu]
   [[menu.main]]
     name = "Services"
-    url = "#services"
+    url = "/#services"
     weight = 1
   [[menu.main]]
     name = "Work"
-    url = "#work"
+    url = "/work/"
     weight = 2
   [[menu.main]]
     name = "Hosting"
-    url = "#hosting-and-management"
+    url = "/#hosting-and-management"
     weight = 3
   [[menu.main]]
     name = "About"
-    url = "#about"
+    url = "/about/"
     weight = 4
   [[menu.main]]
     name = "Contact"
-    url = "#contact"
+    url = "/#contact"
     weight = 5
