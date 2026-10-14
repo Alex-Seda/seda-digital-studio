@@ -18,6 +18,10 @@
   border-left: 1px solid $line;
 }
 
+.hosting-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .service-card {
   min-height: 380px;
   padding: 25px;
