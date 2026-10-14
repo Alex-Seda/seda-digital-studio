@@ -5,6 +5,11 @@
 // 1. Tokens, global defaults, shared components
 @import 'base/tokens';
 @import 'base/base';
+
+// The mobile menu markup uses the theme's hamburger component.
+$primary: $accent; // Assign the theme's primary color to our custom accent color
+@import '../../themes/hugo-serif-theme/assets/scss/libraries/hamburgers/hamburgers';
+
 @import 'components/buttons';
 @import 'components/eyebrow';
 @import 'components/section';
