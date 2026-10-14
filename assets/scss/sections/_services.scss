@@ -40,7 +40,7 @@
 }
 
 .service-card-featured .service-number {
-  color: $legacy-olive-number;
+  color: $black;
 }
 
 // Icon area (✦, grid squares, </>, ↗)
@@ -56,15 +56,8 @@
   color: $ink;
 }
 
-// The four-squares icon on card 02
-.icon-grid {
-  grid-template-columns: repeat(2, 13px);
-  grid-template-rows: repeat(2, 13px);
-  gap: 4px;
-}
-
-.icon-grid i {
-  border: 1px solid $accent;
+.icon-reporting {
+  font-size:64px;
 }
 
 .service-card h3 {
@@ -81,7 +74,7 @@
 }
 
 .service-card-featured p {
-  color: $legacy-olive-text;
+  color: $black;
 }
 
 @media (max-width: $bp-tablet) {
