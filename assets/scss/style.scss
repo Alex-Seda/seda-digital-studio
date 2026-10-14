@@ -21,9 +21,11 @@ $primary: $accent; // Assign the theme's primary color to our custom accent colo
 @import 'sections/hero';
 @import 'sections/trust-strip';
 @import 'sections/services';
+@import 'sections/services-page';
 @import 'sections/case-study';
 @import 'sections/principles';
 @import 'sections/contact';
+@import 'sections/contact-page';
 @import 'sections/about';
 @import 'sections/work';
 @import 'sections/not-found';

@@ -1,0 +1,83 @@
+{{ define "body_classes" }}page-services{{ end }}
+
+{{ define "main" }}
+<main class="services-page">
+  <section class="services-page-hero">
+    <div class="container services-page-hero-inner">
+      <p class="eyebrow"><span class="status-dot"></span> Custom software, thoughtfully supported</p>
+      <h1>Build the system<br><span>your work needs.</span></h1>
+      <p class="services-page-hero-copy">We create custom applications around the real processes of your organization. Then we take care of the technical work required to keep them running.</p>
+    </div>
+  </section>
+
+  <section class="services-page-section" id="custom-applications">
+    <div class="container">
+      <div class="services-page-heading">
+        <div>
+          <p class="eyebrow">Custom applications</p>
+          <h2>Make the work fit<br><span>the business.</span></h2>
+        </div>
+        <div class="services-page-copy">
+          <p>When a generic tool does not match the way your organization operates, we build the missing system. We learn the process first, then shape the application around the people, decisions, and handoffs that matter.</p>
+          <p>The result is software that gives your team a clearer way to work instead of another tool to work around.</p>
+        </div>
+      </div>
+
+      <div class="services-page-capabilities">
+        <article>
+          <span class="service-number">01</span>
+          <h3>Understand the workflow</h3>
+          <p>We map the current process, identify friction, and define what the application needs to make easier.</p>
+        </article>
+        <article>
+          <span class="service-number">02</span>
+          <h3>Build the right system</h3>
+          <p>We create the interfaces, data structure, automations, and integrations that support the real work.</p>
+        </article>
+        <article>
+          <span class="service-number">03</span>
+          <h3>Give the team visibility</h3>
+          <p>Purpose-built dashboards, administration, and reporting help people understand what is happening and what needs attention.</p>
+        </article>
+      </div>
+
+      <div class="services-page-tags">
+        <span>Workflow applications</span>
+        <span>Registration systems</span>
+        <span>APIs &amp; integrations</span>
+        <span>Dashboards &amp; reporting</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-page-section services-page-hosting" id="hosting">
+    <div class="container">
+      <div class="services-page-heading">
+        <div>
+          <p class="eyebrow">Hosting &amp; management</p>
+          <h2>Hosting is complicated.<br><span>Let us handle it.</span></h2>
+        </div>
+        <div class="services-page-copy">
+          <p>Getting an application online is only one part of hosting it. Infrastructure, deployments, security, monitoring, backups, DNS, certificates, renewals, and updates all need attention.</p>
+          <p>We handle those details for you. Your business gets a dependable application and a clear place to turn when something needs care, without having to become an infrastructure team.</p>
+        </div>
+      </div>
+
+      <div class="services-page-hosting-list">
+        <div><span>01</span><div><h3>Infrastructure and deployments</h3><p>We set up the environment your application needs and manage the path from changes in development to a reliable live release.</p></div></div>
+        <div><span>02</span><div><h3>Security, updates, and monitoring</h3><p>We keep an eye on the system, apply necessary updates, and help address issues before they become your team's problem.</p></div></div>
+        <div><span>03</span><div><h3>Domains and the details around them</h3><p>We manage DNS, certificates, renewals, and related configuration so the application stays reachable and connected.</p></div></div>
+        <div><span>04</span><div><h3>Ongoing operational support</h3><p>As your application changes, we provide the technical maintenance needed to keep it useful and available.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-page-cta">
+    <div class="container services-page-cta-inner">
+      <p class="eyebrow">Have a process worth improving?</p>
+      <h2>Let's make the next step <span>clear.</span></h2>
+      <a class="button button-primary" href="{{ "/contact/" | relURL }}">Start a conversation <span>↗</span></a>
+    </div>
+  </section>
+</main>
+{{ end }}

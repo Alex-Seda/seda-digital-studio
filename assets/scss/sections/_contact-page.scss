@@ -1,0 +1,155 @@
+.contact-page-hero {
+  min-height: 620px;
+  display: flex;
+  align-items: flex-end;
+  padding: 170px 0 105px;
+  border-bottom: 1px solid $line;
+  background:
+    radial-gradient(circle at 78% 34%, rgba($accent, .2), transparent 25%),
+    linear-gradient(135deg, $ink 0%, $visual-bg-mid 100%);
+}
+
+.contact-page-hero-inner {
+  max-width: 900px;
+}
+
+.contact-page-hero h1 {
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.contact-page-hero-copy {
+  max-width: 600px;
+  margin: 0;
+  color: $muted;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-page-content {
+  padding: 145px 0;
+  border-bottom: 1px solid $line;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.contact-page-intro h2 {
+  max-width: 560px;
+  margin: 0 0 35px;
+  font-size: clamp(2.8rem, 5vw, 5.1rem);
+  letter-spacing: -.08em;
+  line-height: .94;
+}
+
+.contact-page-intro > p:not(.eyebrow) {
+  max-width: 470px;
+  color: $muted;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.contact-page-intro > p + p {
+  margin-top: 22px;
+}
+
+.contact-page-details {
+  padding-top: 42px;
+}
+
+.contact-page-detail {
+  padding: 24px 10px;;
+  border-top: 1px solid $line;
+}
+
+.contact-page-detail:first-child {
+  background: $visual-border;
+}
+
+.contact-page-detail:last-child {
+  border-bottom: 1px solid $line;
+}
+
+.contact-page-detail-label {
+  display: block;
+  margin-bottom: 12px;
+  color: $accent;
+  font: 500 10px $mono;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contact-page-detail a {
+  color: $paper;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.04em;
+}
+
+.contact-page-detail a span {
+  color: $accent;
+}
+
+.contact-page-detail p {
+  max-width: 430px;
+  margin: 0;
+  color: $muted;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.contact-page-cta {
+  padding: 145px 0;
+  background: $accent;
+  color: $ink;
+}
+
+.contact-page-cta-inner h2 {
+  max-width: 700px;
+  margin: 0 0 40px;
+  font-size: clamp(2.8rem, 5vw, 5.1rem);
+  letter-spacing: -.08em;
+  line-height: .94;
+}
+
+.contact-page-cta .eyebrow {
+  color: $ink;
+}
+
+.contact-page-cta h2 span {
+  color: $paper;
+}
+
+@media (max-width: $bp-tablet) {
+  .contact-page-grid {
+    gap: 50px;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .contact-page-hero {
+    min-height: 560px;
+    padding: 140px 0 78px;
+  }
+
+  .contact-page-hero-copy {
+    font-size: 16px;
+  }
+
+  .contact-page-content,
+  .contact-page-cta {
+    padding: 90px 0;
+  }
+
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-page-details {
+    padding-top: 0;
+  }
+}

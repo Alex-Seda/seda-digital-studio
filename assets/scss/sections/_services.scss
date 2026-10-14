@@ -9,6 +9,10 @@
   margin-left: 37%;
 }
 
+.section-cta {
+  margin: 40px 0 0 37%;
+}
+
 // Four-column card grid with hairline borders
 .service-grid {
   display: grid;
@@ -16,6 +20,15 @@
   margin-top: 80px;
   border-top: 1px solid $line;
   border-left: 1px solid $line;
+}
+
+.home-service-grid,
+.home-hosting-grid {
+  margin-top: 70px;
+}
+
+.home-service-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .hosting-grid {
@@ -92,8 +105,17 @@
     margin-left: 0;
   }
 
+  .section-cta {
+    margin-left: 0;
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .home-service-grid,
+  .home-hosting-grid {
     margin-top: 50px;
   }
 
